@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Hero Me</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="accident">Came by Accident</string>
+    <string name="mutation">Genetic Mutation</string>
+    <string name="birth">Born with Them</string>
+    <string name="choose_powers">Choose Powers</string>
 </resources>

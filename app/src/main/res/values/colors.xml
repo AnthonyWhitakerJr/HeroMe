@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorToolbarBackground">#253748</color>
+    <color name="colorSlightOpacity">#20000000</color>
+    <color name="colorSunglow">#FAC740</color>
+    <color name="colorGradientCenter">#233B4F</color>
+    <color name="colorGradientEdge">#10161D</color>
 </resources>

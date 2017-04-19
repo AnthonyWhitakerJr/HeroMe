@@ -10,6 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/hero_bg_gradient"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
@@ -20,11 +22,11 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/topbannerbar" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/topbannerbar" />
 
         </android.support.v7.widget.Toolbar>
 
@@ -33,5 +35,66 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/heroes" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_button"
+            android:drawableEnd="@drawable/item_selected_btn"
+            android:drawableStart="@drawable/lightning_icon"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/accident"
+            android:textColor="@color/colorSunglow"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_button"
+            android:drawableEnd="@drawable/item_selected_btn"
+            android:drawableStart="@drawable/atomic_icon"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/mutation"
+            android:textColor="@color/colorSunglow"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_button"
+            android:drawableEnd="@drawable/item_selected_btn"
+            android:drawableStart="@drawable/rocket_icon"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/birth"
+            android:textColor="@color/colorSunglow"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_solid_button"
+            android:backgroundTint="@color/colorSunglow"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@string/choose_powers"
+            android:textColor="@color/colorGradientEdge"
+            android:textSize="24sp" />
     </LinearLayout>
 </FrameLayout>
