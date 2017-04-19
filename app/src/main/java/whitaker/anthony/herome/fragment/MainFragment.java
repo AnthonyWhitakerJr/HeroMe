@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import whitaker.anthony.herome.R;
+import whitaker.anthony.herome.activity.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -113,7 +114,8 @@ public class MainFragment extends Fragment {
         choosePowersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                MainActivity mainActivity = (MainActivity)getActivity();
+                mainActivity.loadPickPowerScreen();
             }
         });
 

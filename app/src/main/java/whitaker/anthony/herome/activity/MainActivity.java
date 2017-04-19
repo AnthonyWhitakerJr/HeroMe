@@ -8,8 +8,9 @@ import android.os.Bundle;
 
 import whitaker.anthony.herome.R;
 import whitaker.anthony.herome.fragment.MainFragment;
+import whitaker.anthony.herome.fragment.PickPowerFragment;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener, PickPowerFragment.PickPowerFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,18 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
         }
     }
 
+    public void loadPickPowerScreen() {
+        PickPowerFragment pickPowerFragment = new PickPowerFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, pickPowerFragment).addToBackStack(null).commit();
+    }
+
     @Override
     public void onMainFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onPickPowerFragmentInteraction(Uri uri) {
 
     }
 }
