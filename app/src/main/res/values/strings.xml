@@ -4,4 +4,5 @@
     <string name="mutation">Genetic mutation</string>
     <string name="birth">Born with them</string>
     <string name="choose_powers">Choose Powers</string>
+    <string name="power_acquisition">How did you get your powers?</string>
 </resources>
