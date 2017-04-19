@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import whitaker.anthony.herome.R;
 
@@ -28,7 +29,36 @@ public class MainFragment extends Fragment {
     private String param1;
     private String param2;
 
+    @Deprecated private Button accidentButton;
+    @Deprecated private Button mutationButton;
+    @Deprecated private Button birthButton;
+    private Button choosePowersButton;
+
     private MainFragmentInteractionListener listener;
+
+    enum PowerOrigin {
+        ACCIDENT(R.id.accidentButton, R.drawable.lightning_icon),
+        MUTATION(R.id.mutationButton, R.drawable.atomic_icon),
+        BIRTH(R.id.birthButton, R.drawable.rocket_icon);
+
+        public final int buttonId;
+        public final int iconId;
+
+        PowerOrigin(int buttonId, int iconId) {
+            this.buttonId = buttonId;
+            this.iconId = iconId;
+        }
+
+        private static PowerOrigin fromButtonId(int buttonId) {
+            for(PowerOrigin powerOrigin : values()) {
+                if(powerOrigin.buttonId == buttonId) {
+                    return  powerOrigin;
+                }
+            }
+
+            return null;
+        }
+    }
 
     public MainFragment() {
         // Required empty public constructor
@@ -64,8 +94,53 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+        for(PowerOrigin powerOrigin : PowerOrigin.values()) {
+            Button button = (Button)view.findViewById(powerOrigin.buttonId);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onPowerOriginButtonPressed((Button) v);
+                }
+            });
+        }
+
+        accidentButton = (Button)view.findViewById(R.id.accidentButton);
+        mutationButton = (Button)view.findViewById(R.id.mutationButton);
+        birthButton = (Button)view.findViewById(R.id.birthButton);
+        choosePowersButton = (Button)view.findViewById(R.id.choosePowersButton);
+        choosePowersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        choosePowersButton.setEnabled(false);
+        choosePowersButton.getBackground().setAlpha(128);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        return view;
+    }
+
+    public void onPowerOriginButtonPressed(Button button) {
+        choosePowersButton.setEnabled(true);
+        choosePowersButton.getBackground().setAlpha(255);
+
+        PowerOrigin powerOrigin = PowerOrigin.fromButtonId(button.getId());
+        if(powerOrigin == null) return;
+
+        resetPowerOriginButtons();
+        button.setCompoundDrawablesWithIntrinsicBounds(powerOrigin.iconId,0,R.drawable.item_selected_btn,0);
+    }
+
+    private void resetPowerOriginButtons() {
+        if(getView() == null) return;
+        for(PowerOrigin powerOrigin : PowerOrigin.values()) {
+            Button button = (Button)getView().findViewById(powerOrigin.buttonId);
+            button.setCompoundDrawablesWithIntrinsicBounds(powerOrigin.iconId,0,0,0);
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
