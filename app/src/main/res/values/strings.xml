@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Hero Me</string>
-    <string name="accident">Came by Accident</string>
-    <string name="mutation">Genetic Mutation</string>
-    <string name="birth">Born with Them</string>
+    <string name="accident">Came by accident</string>
+    <string name="mutation">Genetic mutation</string>
+    <string name="birth">Born with them</string>
     <string name="choose_powers">Choose Powers</string>
 </resources>

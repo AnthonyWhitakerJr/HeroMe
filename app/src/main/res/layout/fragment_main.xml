@@ -37,64 +37,64 @@
             app:srcCompat="@drawable/heroes" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/accidentButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:background="@drawable/hero_button"
-            android:drawableEnd="@drawable/item_selected_btn"
             android:drawableStart="@drawable/lightning_icon"
             android:paddingBottom="8dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="8dp"
             android:text="@string/accident"
+            android:textAllCaps="false"
             android:textColor="@color/colorSunglow"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/mutationButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:background="@drawable/hero_button"
-            android:drawableEnd="@drawable/item_selected_btn"
             android:drawableStart="@drawable/atomic_icon"
             android:paddingBottom="8dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="8dp"
             android:text="@string/mutation"
+            android:textAllCaps="false"
             android:textColor="@color/colorSunglow"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/birthButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:background="@drawable/hero_button"
-            android:drawableEnd="@drawable/item_selected_btn"
             android:drawableStart="@drawable/rocket_icon"
             android:paddingBottom="8dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="8dp"
             android:text="@string/birth"
+            android:textAllCaps="false"
             android:textColor="@color/colorSunglow"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/choosePowersButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:background="@drawable/hero_solid_button"
-            android:backgroundTint="@color/colorSunglow"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:text="@string/choose_powers"
             android:textColor="@color/colorGradientEdge"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </FrameLayout>
